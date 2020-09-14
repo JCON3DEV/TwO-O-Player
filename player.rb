@@ -1,18 +1,37 @@
 class Player
-  attr_accessor :answer
+  attr_reader :lives
+  attr_writer :name
 
-  def initialise(name, score)
-    @player1 = player1
-    @player2 = player2
+  def initialize(name)
+    @name = name
+    @lives = 3
   end
+
 
   def answer(turn)
-    answer = $stdin.to_i
+    answer.push($stdin.to_i)
   end
 
-  # this should retunr the poalyers score
-  def score
-    @score
+  def lives_remaining(lives)
+    puts lives
+  end
+
+  def reduce_lives
+    lives -= 1
+  end
+
+  # this should return the players score
+  def alive?
+    @lives >= 0
   end
 
 end
+
+# player score / no of lives X
+# getter only method for lives X
+# player coulkd output lives  X
+# player alive t/f  X
+# player should decrerase own lives
+# game can call method onplayer to reduce and compare if still alive
+# after wrong answers
+

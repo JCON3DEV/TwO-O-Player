@@ -1,8 +1,8 @@
-module Answers
-  def player_response(answer)
-    answer = "@a#{turn}" ? score += 1 : score +=0
-  end
-end
+# module Answers
+#   def player_response(answer)
+#     answer = "@a#{turn}" ? score += 1 : score +=0
+#   end
+# end
 
 
 class Question
@@ -19,3 +19,10 @@ class Question
 
 
 end
+# Game obj needs to include questions, player and Turns X
+
+#  question would need to store string questions and answer X
+#  player should sumbit answer to question 
+
+# ?andy thinks a new instance of question should be created each turn
+
