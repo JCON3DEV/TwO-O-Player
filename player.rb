@@ -2,8 +2,7 @@ class Player
   attr_reader :lives
   attr_writer :name
 
-  def initialize(name)
-    @name = name
+  def initialize
     @lives = 3
   end
 
@@ -17,12 +16,11 @@ class Player
   end
 
   def reduce_lives
-    lives -= 1
+    @lives -= 1
   end
 
-  # this should return the players score
   def alive?
-    @lives >= 0
+    @lives > 0
   end
 
 end
